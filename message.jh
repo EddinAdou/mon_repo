@@ -1,0 +1,25 @@
+entity Informations{
+	name String
+   lastName String
+   country String
+    city String
+    
+}
+entity Coordonnees{
+	email String
+    telephone String
+}
+entity Message{
+	contenu String
+}
+relationship OneToMany{
+	Informations to Coordonnees
+}
+relationship OneToMany{
+	Informations to Message
+}
+relationship OneToOne{
+	Message to Coordonnes
+} 
+dto all with mapstruct
+service all with serviceImpl
